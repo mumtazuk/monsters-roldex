@@ -1,71 +1,56 @@
-# Getting Started with Create React App
+Monsters Rolodex
+============================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Monsters Rolodex is a React-based application that allows users to search and filter a list of monsters. It demonstrates the use of React components, state management, lifecycle methods, and API integration.
 
-## Available Scripts
+### Overview
 
-In the project directory, you can run:
+Monsters Rolodex is a React app that lets users search and filter a list of monsters. It fetches user data from `https://jsonplaceholder.typicode.com/users` and displays them as "monster cards." Each monster has a unique avatar generated using the URL: `https://robohash.org/${monster.id}?set=set4&size=180x180`.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    monsters-rolodex/
+    ├── public/                  # Public assets (index.html, favicon, manifest.json)
+    ├── src/                     # Source files
+    │   ├── components/          # Reusable components
+    │   │   ├── card/            # Card component
+    │   │   │   ├── card.component.jsx
+    │   │   │   └── card.styles.css
+    │   │   ├── card-list/       # CardList component
+    │   │   │   ├── card-list.component.jsx
+    │   │   │   └── card-list.styles.css
+    │   │   └── search-box/      # SearchBox component
+    │   │       ├── search-box.component.jsx
+    │   │       └── search-box.styles.css
+    │   ├── App.css              # Main styles for the app
+    │   ├── App.js               # Main React component
+    │   ├── index.css            # Global styles
+    │   ├── index.js             # ReactDOM render file
+    │   └── reportWebVitals.js   # Performance metrics
+    ├── .gitignore               # Git ignore file
+    ├── package.json             # Project dependencies and scripts
+    ├── README.md                # Project documentation
+    └── yarn.lock                # Dependency lock file (if using Yarn)
 
-### `npm test`
+### Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+3. Start the app using `npm start`.
+4. Access the app at `http://localhost:3000`.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Components
+- **App Component**: Main component managing state and rendering child components.
+- **SearchBox Component**: Renders search input field to filter monsters.
+- **CardList Component**: Maps over the list of monsters and renders a Card for each.
+- **Card Component**: Displays monster details including name, email, and avatar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# monsters-roldex
+  
+### API Integration
+- Fetches data from: `https://jsonplaceholder.typicode.com/users`.
+- Each monster's avatar is generated dynamically using the following URL:
+  - `https://robohash.org/${monster.id}?set=set4&size=180x180`
+  - This generates a unique avatar for each monster based on their ID.
