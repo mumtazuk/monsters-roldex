@@ -1,7 +1,19 @@
 .card-list {
-    width: 85vw;
-    margin: 0 auto;
-    display:grid ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 20 px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-list {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-list {
+      gap: 10px;
+    }
+  }
+  
