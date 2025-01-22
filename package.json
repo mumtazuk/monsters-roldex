@@ -2,7 +2,7 @@
   "name": "monsters-roldex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/mumtazuk/monsters-roldex",
+  "homepage": "https://mumtazuk.github.io/monsters-roldex",
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
