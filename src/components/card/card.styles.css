@@ -4,16 +4,27 @@
     background-color: #95dada;
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
     margin: 10px auto;
     width: 300px;
     cursor: pointer;
     transition: transform 0.25s ease-out;
+    max-height: 350px;
+    overflow: hidden;
   }
   
   .card-container img {
     max-width: 100%;
     height: auto;
+  }
+  
+  .card-container h2 {
+    margin-bottom: 0px; /* Reduce margin between name and email */
+  }
+  
+  .card-container p {
+    margin-top: 0; /* Remove margin on top of email */
+    margin-bottom: 10px; /* Adjust margin to control the bottom spacing */
   }
   
   .card-container:hover {
